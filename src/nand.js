@@ -10,7 +10,7 @@
  */
 export function nand(a, b) {
     if (a === true && b === true) {
-        return false
+        return 0
     }
-    return true    
+    return 1    
 }
