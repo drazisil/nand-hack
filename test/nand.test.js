@@ -1,3 +1,4 @@
+// @ts-check
 import assert from 'assert'
 import { describe, it } from 'mocha'
 import {nand} from '../src/nand.js'

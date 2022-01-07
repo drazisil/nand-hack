@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * De-multiplexer chip
  * 

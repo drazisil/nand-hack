@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * NAND logic chip
  * 
@@ -10,7 +11,7 @@
  */
 export function nand(a, b) {
     if (a === true && b === true) {
-        return 0
+        return false
     }
-    return 1    
+    return true
 }

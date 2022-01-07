@@ -1,3 +1,4 @@
+// @ts-check
 import assert from "assert"
 import {and} from '../src/and.js'
 

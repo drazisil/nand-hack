@@ -1,3 +1,4 @@
+// @ts-check
 import assert from "assert"
 import { not} from '../src/not.js'
 
