@@ -1,0 +1,23 @@
+import assert from 'assert'
+import { describe, it } from 'mocha'
+import {nand} from '../src/nand.js'
+describe('NAND chip', function() {
+    describe('should return false', function() {
+        it('when (a, b) == true ', function() {
+            assert(nand(false, false), 1)
+        })
+    })
+
+    describe('should return true', function () {
+        it('when a == false and b == false', function () {
+            assert(nand(false, false), 1)
+        })
+        it('when a == true and b == false', function () {
+            assert(nand(true, false), 1)
+        })
+        it('when a == false and b == true', function () {
+            assert(nand(false, true), 1)
+        })
+    })
+
+})
