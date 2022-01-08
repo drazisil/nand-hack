@@ -1,4 +1,6 @@
 // @ts-check
+import {nand} from './nand.js'
+import {not} from './not.js'
 /**
  * AND chip
  * 
@@ -8,5 +10,5 @@
  * @returns {boolean}
  */
 export function and(a, b) {
-    return (a === true && b === true)
+    return not(nand(a, b))
 }
