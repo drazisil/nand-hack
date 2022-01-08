@@ -9,7 +9,7 @@
   },
   "type": "module",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --bail"
   },
   "keywords": [],
   "author": "",
