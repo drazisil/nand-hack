@@ -5,11 +5,12 @@
   "main": "index.js",
   "devDependencies": {
     "@types/node": "16.11.19",
+    "c8": "^7.11.0",
     "mocha": "9.1.3"
   },
   "type": "module",
   "scripts": {
-    "test": "mocha --bail"
+    "test": "c8 mocha --bail"
   },
   "keywords": [],
   "author": "",
