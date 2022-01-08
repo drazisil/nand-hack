@@ -32,7 +32,7 @@ export function not16(inputA0,inputA1,inputA2,inputA3,inputA4,inputA5,inputA6,in
     const stateAstage1 = or(stateA01, stateA23)
     const stateAstage2 = or(stateA45, stateA67)
 
-    const stateA = or(stateAstage1, stateAstage2) // if any of B are true
+    const stateA = or(stateAstage1, stateAstage2) // if any of A are true
 
     const stateB01 = or(inputB0, inputB1)
     const stateB23 = or(inputB2, inputB3)
