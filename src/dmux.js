@@ -1,4 +1,7 @@
 // @ts-check
+import {and} from './and.js'
+import { not } from './not.js'
+import {xor} from './xor.js'
 /**
  * De-multiplexer chip
  * 
@@ -8,8 +11,6 @@
  * @returns {{a: boolean, b: boolean}}
  */
 export function dmux(input, sel) {
-    if (sel) {
-        return { a: false, b: input}
-    }
-    return { a: input, b: false}
+    return {a: and(input, not(sel)), b: and(input, sel)}
+
 }
