@@ -1,4 +1,6 @@
 // @ts-check
+import { and} from './and.js'
+import { not} from './not.js'
 /**
  * OR gate
  * 
@@ -8,8 +10,5 @@
  * @returns {boolean}
  */
 export function or(a, b) {
-    if (a == false && b == false) {
-        return false
-    }
-    return true
+    return not(and(not(and(a, a)),not(and(b,b))))
 }
