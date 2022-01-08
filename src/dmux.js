@@ -1,7 +1,6 @@
 // @ts-check
 import {and} from './and.js'
 import { not } from './not.js'
-import {xor} from './xor.js'
 /**
  * De-multiplexer chip
  * 
