@@ -1,4 +1,5 @@
 // @ts-check
+import {nand} from './nand.js'
 /**
  * NOT chip
  * 
@@ -7,5 +8,5 @@
  * @returns {boolean}
  */
 export function not(input) {
-    return !input
+    return nand(input, input)
 }
