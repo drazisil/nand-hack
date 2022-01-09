@@ -14,7 +14,7 @@ describe('16-bit AND chip', function () {
             /** @type {byte16} */
             const byte16true = [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true]
 
-            assert.deepStrictEqual(and16(...byte16true, ...byte16true), [...byte16true], `[${byte16true}],  [${byte16true}]`)
+            assert.deepStrictEqual(and16(byte16true, byte16true), byte16true, `[${byte16true}],  [${byte16true}]`)
         })
 
     })
@@ -29,7 +29,7 @@ describe('16-bit AND chip', function () {
 
 
 
-                assert.deepStrictEqual(and16(...byte16false, ...byte16true), [...byte16false], `[${byte16false}],  [${byte16true}]`)
+                assert.deepStrictEqual(and16(byte16false, byte16true), byte16false, `[${byte16false}],  [${byte16true}]`)
 
 
             })

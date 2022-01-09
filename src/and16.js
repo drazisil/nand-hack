@@ -9,51 +9,18 @@ import { and } from './and.js'
 /**
  * 16-bit AND chip
  * 
- * @param {boolean} inputA00
- * @param {boolean} inputA01
- * @param {boolean} inputA02
- * @param {boolean} inputA03
- * @param {boolean} inputA04
- * @param {boolean} inputA05
- * @param {boolean} inputA06
- * @param {boolean} inputA07
- * @param {boolean} inputA08
- * @param {boolean} inputA09
- * @param {boolean} inputA10
- * @param {boolean} inputA11
- * @param {boolean} inputA12
- * @param {boolean} inputA13
- * @param {boolean} inputA14
- * @param {boolean} inputA15
- * @param {boolean} inputB00
- * @param {boolean} inputB01
- * @param {boolean} inputB02
- * @param {boolean} inputB03
- * @param {boolean} inputB04
- * @param {boolean} inputB05
- * @param {boolean} inputB06
- * @param {boolean} inputB07
- * @param {boolean} inputB08
- * @param {boolean} inputB09
- * @param {boolean} inputB10
- * @param {boolean} inputB11
- * @param {boolean} inputB12
- * @param {boolean} inputB13
- * @param {boolean} inputB14
- * @param {boolean} inputB15
+ * @param {byte16} inputA 16-bit array of boolean values
+ * @param {byte16} inputB 16-bit array of boolean values
  * @returns {byte16}
  */
 export function and16(
-    inputA00, inputA01, inputA02, inputA03, inputA04, inputA05, inputA06, inputA07,
-    inputA08, inputA09, inputA10, inputA11, inputA12, inputA13, inputA14, inputA15,
-    inputB00, inputB01, inputB02, inputB03, inputB04, inputB05, inputB06, inputB07,
-    inputB08, inputB09, inputB10, inputB11, inputB12, inputB13, inputB14, inputB15
+    inputA, inputB
 ) {
     return [
-        and(inputA00, inputB00),and(inputA01, inputB01),and(inputA02, inputB02),and(inputA03, inputB03),
-        and(inputA04, inputB04),and(inputA05, inputB05),and(inputA06, inputB06),and(inputA07, inputB07),
-        and(inputA08, inputB08),and(inputA09, inputB09),and(inputA10, inputB10),and(inputA11, inputB11),
-        and(inputA12, inputB12),and(inputA13, inputB13),and(inputA14, inputB14),and(inputA15, inputB15)
+        and(inputA[0], inputB[0]),and(inputA[1], inputB[1]),and(inputA[2], inputB[2]),and(inputA[3], inputB[3]),
+        and(inputA[4], inputB[4]),and(inputA[5], inputB[5]),and(inputA[6], inputB[6]),and(inputA[7], inputB[7]),
+        and(inputA[8], inputB[8]),and(inputA[9], inputB[9]),and(inputA[10], inputB[10]),and(inputA[11], inputB[11]),
+        and(inputA[12], inputB[12]),and(inputA[13], inputB[13]),and(inputA[14], inputB[14]),and(inputA[15], inputB[15])
     ]
 
 }
