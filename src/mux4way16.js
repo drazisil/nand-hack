@@ -11,7 +11,7 @@ import { not } from './not.js'
  */
 
 /**
- * 16-bit Multiplexer chip
+ * 4-way 16-bit Multiplexer chip
  * 
  * @param {byte16} inputA
  * @param {byte16} inputB
