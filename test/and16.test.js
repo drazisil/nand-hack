@@ -8,39 +8,31 @@ import { and16 } from '../src/and16.js'
  */
 
 describe('16-bit AND chip', function () {
-    describe('should return true', function () {
+    describe('should return output(0...15) == true', function () {
         it('when input1(0...16) is true and input2(0...15) is true', function () {
 
-            /** @type {byte} */
-            const input1 = [true, true, true, true, true, true, true, true]
-            /** @type {byte} */
-            const input2 = [true, true, true, true, true, true, true, true]
             /** @type {byte16} */
-            const input = [...input1, ...input2]
+            const byte16true = [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true]
 
-            assert(and16(...input), `[${input1}],  [${input2}]`)
+            assert.deepStrictEqual(and16(...byte16true, ...byte16true), [...byte16true], `[${byte16true}],  [${byte16true}]`)
         })
 
     })
 
-    describe('should return false', function () {
+    describe('should return output(0...15) == false', function () {
         for (let i1 = 0; i1 <= 15; i1++) {
-            it('when any of input1(0...15) is false or any of input2(0...15) is false', function () {
+            it('when input1(0...15) is false and input2(0...15) is true', function () {
 
-                /** @type {byte} */
-                const input1 = [true, true, true, true, true, true, true, true]
-                input1[i1] = false
-                for (let i2 = 0; i2 <= 15; i2++) {
+                /** @type {byte16} */
+                const byte16true = [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true]
+                /** @type {byte16} */
+                const byte16false = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
 
-                    /** @type {byte} */
-                    const input2 = [true, true, true, true, true, true, true, true]
-                    input2[i2] = false
-                    /** @type {byte16} */
-                    const input = [...input1, ...input2]
 
-                    assert(!and16(...input), `[${input1}],  [${input2}]`)
 
-                }
+                assert.deepStrictEqual(and16(...byte16false, ...byte16true), [...byte16false], `[${byte16false}],  [${byte16true}]`)
+
+
             })
         }
     })
