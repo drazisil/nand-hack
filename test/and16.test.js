@@ -20,7 +20,6 @@ describe('16-bit AND chip', function () {
     })
 
     describe('should return output(0...15) == false', function () {
-        for (let i1 = 0; i1 <= 15; i1++) {
             it('when input1(0...15) is false and input2(0...15) is true', function () {
 
                 /** @type {byte16} */
@@ -34,7 +33,7 @@ describe('16-bit AND chip', function () {
 
 
             })
-        }
+        
     })
 
 })
