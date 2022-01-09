@@ -16,10 +16,10 @@ import { not } from './not.js'
  * @returns {bit4}
  */
 export function dmux4way(input, sel1, sel2) {
-    const state1 = not(or(sel1, sel2))
-    const state2 = and(not(sel1), sel2)
-    const state3 = and(sel1, not(sel2))
-    const state4 = and(sel1, sel2)
+    const state1 = and(input, not(or(sel1, sel2)))
+    const state2 = and(input, and(not(sel1), sel2))
+    const state3 = and(input, and(sel1, not(sel2)))
+    const state4 = and(input, and(sel1, sel2))
 
     return [state1, state2, state3, state4]
 }
