@@ -18,7 +18,7 @@ describe('16-bit OR chip', function () {
         it('when input1(0...16) is true and input2(0...15) is true', function () {
 
 
-            assert.deepStrictEqual(or16(...byte16true, ...byte16true), [...byte16true], `[${byte16true}],  [${byte16true}]`)
+            assert.deepStrictEqual(or16(byte16true, byte16true), byte16true, `[${byte16true}],  [${byte16true}]`)
         })
 
         it('when input1(0...15) is false and input2(0...15) is true', function () {
@@ -26,7 +26,7 @@ describe('16-bit OR chip', function () {
 
 
 
-            assert.deepStrictEqual(or16(...byte16false, ...byte16true), [...byte16true], `[${byte16false}],  [${byte16true}]`)
+            assert.deepStrictEqual(or16(byte16false, byte16true), byte16true, `[${byte16false}],  [${byte16true}]`)
 
 
         })
@@ -37,7 +37,7 @@ describe('16-bit OR chip', function () {
 
 
 
-            assert.deepStrictEqual(or16(...byte16true, ...byte16false), [...byte16true], `[${byte16true}],  [${byte16false}]`)
+            assert.deepStrictEqual(or16(byte16true, byte16false), byte16true, `[${byte16true}],  [${byte16false}]`)
 
 
         })
@@ -56,7 +56,7 @@ describe('16-bit OR chip', function () {
 
 
 
-            assert.deepStrictEqual(or16(...byte16false, ...byte16false), [...byte16false], `[${byte16false}]`)
+            assert.deepStrictEqual(or16(byte16false, byte16false), byte16false, `[${byte16false}]`)
 
 
         })
