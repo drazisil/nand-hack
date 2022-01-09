@@ -15,9 +15,9 @@ describe('16-bit Multiplexer chip', function () {
             const byte16stream2 = [false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true]
 
     it('should return byte16strea1 if sel == false', function () {
-        assert.deepStrictEqual(mux16(...byte16stream1, ...byte16stream2, false), [...byte16stream1])
+        assert.deepStrictEqual(mux16(byte16stream1, byte16stream2, false), byte16stream1)
     })
     it('should return byte16stream2 if sel == true', function () {
-        assert.deepStrictEqual(mux16(...byte16stream1, ...byte16stream2, true), [...byte16stream2])
+        assert.deepStrictEqual(mux16(byte16stream1, byte16stream2, true), byte16stream2)
     })
 })
