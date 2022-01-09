@@ -10,8 +10,6 @@ import { xor } from "../logic/xor.js"
  * @returns {{carry: boolean, sum: boolean}}
  */
 export function halfAdder(a, b) {
-    const carry = and(a, b)
-    const sum = xor(a, b)
 
-    return {carry, sum}
+    return {carry: and(a, b), sum: xor(a, b)}
 }
