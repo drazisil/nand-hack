@@ -44,7 +44,7 @@ export function alu(x, y, zx, nx, zy, ny, f, no) {
 
     console.log(`debug: shouldNotX = [${shouldNotX}]`)
 
-    rX = mux16(rX, not16(...rX), shouldZeroX)
+    rX = mux16(rX, not16(...rX), shouldNotX)
 
     console.log(`debug: rX = [${rX}]`)
 
