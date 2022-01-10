@@ -1,6 +1,4 @@
-import { and } from "../logic/and.js"
 import { or } from "../logic/or.js"
-import { xor } from "../logic/xor.js"
 import { halfAdder } from "./halfAdder.js"
 
 /**
