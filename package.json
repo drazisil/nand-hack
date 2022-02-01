@@ -7,7 +7,7 @@
     "@types/mocha": "9.1.0",
     "@types/node": "16.11.22",
     "c8": "7.11.0",
-    "mocha": "9.1.4",
+    "mocha": "9.2.0",
     "typescript": "4.5.5"
   },
   "type": "module",
