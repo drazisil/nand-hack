@@ -5,7 +5,7 @@
   "main": "index.js",
   "devDependencies": {
     "@types/mocha": "10.0.6",
-    "@types/node": "20.11.16",
+    "@types/node": "20.11.17",
     "c8": "8.0.1",
     "mocha": "10.3.0",
     "typescript": "5.3.3"
