@@ -8,7 +8,7 @@
     "@types/node": "20.14.2",
     "c8": "8.0.1",
     "mocha": "10.4.0",
-    "typescript": "5.4.4"
+    "typescript": "5.5.3"
   },
   "type": "module",
   "scripts": {
